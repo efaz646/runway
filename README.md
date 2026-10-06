@@ -17,7 +17,7 @@ Runway is a collaborative hackathon project, built together as a pair using AI c
 
 | Name   | GitHub                                              |
 | ------ | --------------------------------------------------- |
-| Foysal | [`@YOURUSERNAME`](https://github.com/YOURUSERNAME) |
+| Foysal | [`@foysalbinislam`](https://github.com/foysalbinislam) |
 | Efaz   | [`@efaz646`](https://github.com/efaz646)            |
 
 ## Contents
