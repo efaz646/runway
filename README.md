@@ -118,7 +118,7 @@ You need **Python 3.11 or newer** and two API keys: one from [Google AI Studio](
 ### 1. Get the code
 
 ```bash
-git clone https://github.com/YOURUSERNAME/runway-hackathon.git
+git clone https://github.com/efaz646/runway.git
 cd runway-hackathon
 ```
 
