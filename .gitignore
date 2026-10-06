@@ -1,0 +1,13 @@
+# Secrets: never commit API keys
+.env
+.streamlit/secrets.toml
+
+# Runway: last verified agent run and recordings, made on the demo machine
+cache/
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/

@@ -1,0 +1,14 @@
+[theme]
+base = "light"
+primaryColor = "#2f7d5b"
+font = "sans serif"
+
+[server]
+headless = true
+runOnSave = false
+
+[browser]
+gatherUsageStats = false
+
+[client]
+toolbarMode = "minimal"

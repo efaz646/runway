@@ -1,0 +1,18 @@
+customer,contact_name,email,invoice_number,amount,due_date,paid
+Idle Cabs Ltd,Sandra,accounts@idlecabs.example,INV-1003,640.00,2026-04-10,Yes
+Thornton Builders,Gary,office@thorntonbuilders.example,INV-1006,1180.00,2026-04-24,Yes
+Shipley Van Hire,Priya,accounts@shipleyvanhire.example,INV-1009,2210.00,2026-05-08,Yes
+Saltaire Catering Co,Tom,tom@saltairecatering.example,INV-1012,455.50,2026-05-22,Yes
+Wharfe Valley Taxis,Mick,mick@wharfevalleytaxis.example,INV-1015,1540.00,2026-06-05,Yes
+Calder Plumbing & Heating,Joanne,accounts@calderplumbing.example,INV-1018,980.00,2026-06-19,Yes
+Airedale Couriers,Imran,imran@airedalecouriers.example,INV-1021,1325.00,2026-07-03,Yes
+Idle Cabs Ltd,Sandra,accounts@idlecabs.example,INV-1024,715.00,2026-07-17,Yes
+Thornton Builders,Gary,office@thorntonbuilders.example,INV-1027,860.00,2026-07-31,Yes
+Shipley Van Hire,Priya,accounts@shipleyvanhire.example,INV-1029,2475.00,2026-08-17,No
+Bingley Florists,Helen,helen@bingleyflorists.example,INV-1033,298.00,2026-08-28,Yes
+Saltaire Catering Co,Tom,tom@saltairecatering.example,INV-1035,512.00,2026-09-11,Yes
+Calder Plumbing & Heating,Joanne,accounts@calderplumbing.example,INV-1037,1240.50,2026-09-04,No
+Idle Cabs Ltd,Sandra,accounts@idlecabs.example,INV-1039,690.00,2026-09-25,Yes
+Wharfe Valley Taxis,Mick,mick@wharfevalleytaxis.example,INV-1042,1860.00,2026-09-23,No
+Bingley Florists,Helen,helen@bingleyflorists.example,INV-1047,385.00,2026-10-16,No
+Airedale Couriers,Imran,imran@airedalecouriers.example,INV-1049,1120.00,2026-10-28,No
