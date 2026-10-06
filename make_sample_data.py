@@ -26,7 +26,7 @@ CLOSING_BALANCE = 3600.00  # balance on 4 Oct; the opening balance is worked bac
 SEED = 7
 
 # Regular monthly payments: (day of month, description, amounts by month Apr..Sep[, Oct])
-ELECTRICITY = [412.60, 398.20, 386.40, 379.90, 391.30, 1236.80]  # September is the spike
+ELECTRICITY = [412.60, 398.20, 386.40, 379.95, 391.30, 1236.80]  # September is the spike
 PARTS_ACCOUNT = [2382.15, 2511.40, 2447.80, 2463.25, 2391.60, 2452.90]
 MONTHLY = [
     (1, "DD CANAL ROAD ESTATES RENT", [1850.00] * 7),  # Apr..Oct (1 Oct is in the statement)
@@ -48,7 +48,7 @@ INVOICES = [
     ("INV-1003", "Idle Cabs Ltd", "Sandra", "accounts@idlecabs.example", 640.00, date(2026, 4, 10), date(2026, 4, 9)),
     ("INV-1006", "Thornton Builders", "Gary", "office@thorntonbuilders.example", 1180.00, date(2026, 4, 24), date(2026, 4, 27)),
     ("INV-1009", "Shipley Van Hire", "Priya", "accounts@shipleyvanhire.example", 2210.00, date(2026, 5, 8), date(2026, 5, 8)),
-    ("INV-1012", "Saltaire Catering Co", "Tom", "tom@saltairecatering.example", 455.50, date(2026, 5, 22), date(2026, 5, 21)),
+    ("INV-1012", "Saltaire Catering Co", "morty", "tom@saltairecatering.example", 455.50, date(2026, 5, 22), date(2026, 5, 21)),
     ("INV-1015", "Wharfe Valley Taxis", "Mick", "mick@wharfevalleytaxis.example", 1540.00, date(2026, 6, 5), date(2026, 6, 9)),
     ("INV-1018", "Calder Plumbing & Heating", "Joanne", "accounts@calderplumbing.example", 980.00, date(2026, 6, 19), date(2026, 6, 19)),
     ("INV-1021", "Airedale Couriers", "Imran", "imran@airedalecouriers.example", 1325.00, date(2026, 7, 3), date(2026, 7, 6)),
@@ -56,7 +56,7 @@ INVOICES = [
     ("INV-1027", "Thornton Builders", "Gary", "office@thorntonbuilders.example", 860.00, date(2026, 7, 31), date(2026, 8, 4)),
     ("INV-1029", "Shipley Van Hire", "Priya", "accounts@shipleyvanhire.example", 2475.00, date(2026, 8, 17), None),  # overdue 49 days
     ("INV-1033", "Bingley Florists", "Helen", "helen@bingleyflorists.example", 298.00, date(2026, 8, 28), date(2026, 8, 27)),
-    ("INV-1035", "Saltaire Catering Co", "Tom", "tom@saltairecatering.example", 512.00, date(2026, 9, 11), date(2026, 9, 14)),
+    ("INV-1035", "Saltaire Catering Co", "morty", "tom@saltairecatering.example", 512.00, date(2026, 9, 11), date(2026, 9, 14)),
     ("INV-1037", "Calder Plumbing & Heating", "Joanne", "accounts@calderplumbing.example", 1240.50, date(2026, 9, 4), None),  # overdue 31 days
     ("INV-1039", "Idle Cabs Ltd", "Sandra", "accounts@idlecabs.example", 690.00, date(2026, 9, 25), date(2026, 9, 24)),
     ("INV-1042", "Wharfe Valley Taxis", "Mick", "mick@wharfevalleytaxis.example", 1860.00, date(2026, 9, 23), None),  # overdue 12 days
