@@ -2,7 +2,7 @@
 
 **An AI financial assistant for small businesses. It watches the money, warns early, and does the admin to fix it.**
 
-**Live demo:** [Runway](https://runwayy.streamlit.app/) · **Code:** [github.com/efaz646/bradfordhackathon](https://github.com/efaz646/bradfordhackathon)
+**Live demo:** [Runway](https://runwayy.streamlit.app/) · **Code:** [github.com/efaz646/bradfordhackathon](https://github.com/efaz646/runway)
 
 > **Sample data only.** Bradford Auto Care, its customers and its suppliers are made up. No bank is connected, and no email is ever sent.
 
