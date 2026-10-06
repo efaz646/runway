@@ -7,7 +7,7 @@
 ![Streamlit](https://img.shields.io/badge/Streamlit-app-FF4B4B?logo=streamlit&logoColor=white)
 ![Tests](https://img.shields.io/badge/tests-pytest-0A9EDC?logo=pytest&logoColor=white)
 
-**Live demo:** [runwayy.streamlit.app](https://runwayy.streamlit.app/) · **Code:** [github.com/YOURUSERNAME/runway-hackathon](https://github.com/YOURUSERNAME/runway-hackathon)
+**Live demo:** [runwayy.streamlit.app](https://runwayy.streamlit.app/) · **Code:** [github.com/efaz646/runway](https://github.com/foysalbinislam/runway)
 
 > **Sample data only.** Bradford Auto Care, its customers and its suppliers are fictional. No bank is connected, and no email is ever sent.
 
@@ -15,10 +15,10 @@
 
 Runway is a collaborative hackathon project, built together as a pair using AI coding assistants.
 
-| Name   | GitHub                                              |
-| ------ | --------------------------------------------------- |
+| Name   | GitHub                                                 |
+| ------ | ------------------------------------------------------ |
 | Foysal | [`@foysalbinislam`](https://github.com/foysalbinislam) |
-| Efaz   | [`@efaz646`](https://github.com/efaz646)            |
+| Efaz   | [`@efaz646`](https://github.com/efaz646)               |
 
 ## Contents
 
@@ -89,16 +89,16 @@ flowchart LR
 
 ## Technical highlights
 
-| Area                     | What it shows                                                                                                                                              |
-| ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **AI agent design**      | Gemini function calling: the model retrieves facts through defined tools (`get_cash_forecast`, `get_unpaid_invoices`, `get_supplier_bills`) rather than guessing. |
+| Area                     | What it shows                                                                                                                                                                           |
+| ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **AI agent design**      | Gemini function calling: the model retrieves facts through defined tools (`get_cash_forecast`, `get_unpaid_invoices`, `get_supplier_bills`) rather than guessing.                        |
 | **Output validation**    | Automated number validation checks every figure in AI-written text against the calculated data, sends failures back to be fixed, then falls back to a plain template after two failures. |
-| **Graceful degradation** | If Gemini or ElevenLabs fails, the app falls back to its last verified analysis, a saved recording or text, and labels the fallback on screen.            |
-| **Data cleaning**        | Cleans a deliberately messy bank export with pandas before forecasting.                                                                                    |
-| **Testing**              | 32 offline pytest tests using simulated Gemini and ElevenLabs clients that can be told to make mistakes, such as inventing a number, plus optional live tests. |
-| **Known-answer data**    | Sample data is built with known answers, so every result can be checked.                                                                                   |
-| **Deployment**           | Deployed on Streamlit Community Cloud, with an optional Dockerfile for other hosts.                                                                        |
-| **Secrets handling**     | API keys are read from `.env` or Streamlit secrets. `.env` is git-ignored and keys are never baked into the Docker image.                                  |
+| **Graceful degradation** | If Gemini or ElevenLabs fails, the app falls back to its last verified analysis, a saved recording or text, and labels the fallback on screen.                                          |
+| **Data cleaning**        | Cleans a deliberately messy bank export with pandas before forecasting.                                                                                                                 |
+| **Testing**              | 32 offline pytest tests using simulated Gemini and ElevenLabs clients that can be told to make mistakes, such as inventing a number, plus optional live tests.                          |
+| **Known-answer data**    | Sample data is built with known answers, so every result can be checked.                                                                                                                |
+| **Deployment**           | Deployed on Streamlit Community Cloud, with an optional Dockerfile for other hosts.                                                                                                     |
+| **Secrets handling**     | API keys are read from `.env` or Streamlit secrets. `.env` is git-ignored and keys are never baked into the Docker image.                                                               |
 
 ## Built with
 
@@ -119,7 +119,7 @@ You need **Python 3.11 or newer** and two API keys: one from [Google AI Studio](
 
 ```bash
 git clone https://github.com/efaz646/runway.git
-cd runway-hackathon
+cd runway
 ```
 
 ### 2. Add your keys
@@ -152,7 +152,7 @@ In the app, check that both keys show ✅ in the sidebar, then press **Load Dave
 ## Deploy on Streamlit Community Cloud
 
 1. Go to [share.streamlit.io](https://share.streamlit.io), sign in with GitHub, and choose **Create app**.
-2. Pick repository `YOURUSERNAME/runway-hackathon`, branch `main`, and main file **`app.py`**.
+2. Pick repository `foysalbinislam/runway`, branch `main`, and main file **`app.py`**.
 3. Under **Advanced settings**, choose Python 3.12 and paste this into **Secrets** (quotes are needed here):
 
 ```toml
@@ -223,24 +223,24 @@ pytest -q tests/test_live.py -s    # live tests against the real Gemini and Elev
 
 After using `run_windows.bat`, install pytest first: `.venv\Scripts\python -m pip install pytest`, then run `.venv\Scripts\python -m pytest -q`.
 
-| Test case               | What is checked automatically                                                                                                       | Check by hand                                                      |
-| ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
-| TC1 Forecast            | Cash runs short in week 5, the chart dips below zero in week 5, exactly 3 actions, invented numbers are sent back                   | The three actions make sense                                       |
-| TC2 Late payment chaser | Exactly 3 overdue invoices; each draft names the right customer, amount and days overdue; nothing can be sent                       | The tone reads right: friendly, firm, final                        |
-| TC3 Bill checker        | Exactly 1 spike (September electricity); the query email quotes the real amounts                                                    | Only September is highlighted; Gemini's suggestions fit            |
-| TC4 Voice               | The briefing matches the figures; "who owes me money?" names all 5 customers and amounts; without a key, the text briefing is shown | It plays on the demo speakers and hears your question in the room  |
+| Test case               | What is checked automatically                                                                                                       | Check by hand                                                     |
+| ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
+| TC1 Forecast            | Cash runs short in week 5, the chart dips below zero in week 5, exactly 3 actions, invented numbers are sent back                   | The three actions make sense                                      |
+| TC2 Late payment chaser | Exactly 3 overdue invoices; each draft names the right customer, amount and days overdue; nothing can be sent                       | The tone reads right: friendly, firm, final                       |
+| TC3 Bill checker        | Exactly 1 spike (September electricity); the query email quotes the real amounts                                                    | Only September is highlighted; Gemini's suggestions fit           |
+| TC4 Voice               | The briefing matches the figures; "who owes me money?" names all 5 customers and amounts; without a key, the text briefing is shown | It plays on the demo speakers and hears your question in the room |
 
 The offline tests use simulated versions of Gemini and ElevenLabs that can be told to make mistakes, such as inventing a number, to prove Runway catches them.
 
 ## Troubleshooting
 
-| Problem                                          | Fix                                                                                                                                                                   |
-| ------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `No module named 'google'`                       | The packages aren't installed for the Python you used. Use `run_windows.bat`, or run `.venv\Scripts\python -m streamlit run app.py`. Don't use VS Code's ▶ Run button. |
-| Keys show ❌ missing                              | Check the file is named exactly `.env`, not `.env.txt`, and is in the same folder as `app.py`. Save it, then refresh the page.                                        |
+| Problem                                          | Fix                                                                                                                                                                                                  |
+| ------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `No module named 'google'`                       | The packages aren't installed for the Python you used. Use `run_windows.bat`, or run `.venv\Scripts\python -m streamlit run app.py`. Don't use VS Code's ▶ Run button.                                |
+| Keys show ❌ missing                              | Check the file is named exactly `.env`, not `.env.txt`, and is in the same folder as `app.py`. Save it, then refresh the page.                                                                       |
 | Gemini error `401 ACCESS_TOKEN_TYPE_UNSUPPORTED` | Your Gemini key starts with `AQ.`. These new-style keys are currently rejected by the Gemini API. Create a key that starts with `AIza` in Google AI Studio, ideally in an older Google Cloud project. |
-| Keys show ❌ on Streamlit Cloud                   | Check the Secrets use quotes, then choose **⋮** and **Reboot app**.                                                                                                   |
-| Gemini or ElevenLabs is down                     | The app keeps working with its saved run or text fallbacks, and labels them on screen.                                                                                |
+| Keys show ❌ on Streamlit Cloud                   | Check the Secrets use quotes, then choose **⋮** and **Reboot app**.                                                                                                                                  |
+| Gemini or ElevenLabs is down                     | The app keeps working with its saved run or text fallbacks, and labels them on screen.                                                                                                               |
 
 ## Project structure
 
